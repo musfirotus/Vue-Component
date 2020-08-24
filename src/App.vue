@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="background-image: url('./assets/bg5.jpg')">
     <searching />
   </div>
 </template>
@@ -15,13 +15,4 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="./assets/css/styles.css" scoped></style>
