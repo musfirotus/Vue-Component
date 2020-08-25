@@ -3,7 +3,7 @@
     <h1 class="text-center font-bold mb-5 text-5xl text-black bg-blue-300">Photo Gallery</h1>
     <search :message="message" @new-search="newSearch"/>
     <selected-item :cari="cari"/>
-    <item :list="list"/>
+    <item :data="data"/>
   </div>
 </template>
 
@@ -21,11 +21,12 @@ export default {
   },
   methods: {
     newSearch(e) {
-      const newList = [...this.list];
+      const newList = [...this.data];
       if (e.length >= 3){
         this.message = "Loading..."
         this.cari = newList.filter(val => val.title.toLowerCase().includes(e))
-      } else {
+      }
+      else {
         this.message = ""
         this.cari = []
       }
@@ -36,7 +37,7 @@ export default {
     searchValue: "",
     cari: [],
     message: "",
-    list: [
+    data: [
       {
         "albumId": 1,
         "id": 1,
